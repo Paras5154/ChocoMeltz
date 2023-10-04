@@ -13,8 +13,6 @@ const { Console } = require("console");
 
 dotenv.config();
 
-const DB = "mongodb+srv://ChocoMeltz:Stop%409211@cluster0.kyymxoo.mongodb.net/ChocoMeltz?retryWrites=true&w=majority&appName=AtlasApp";
-
 mongoose.connect(process.env.MONGO_ATLAS_URL).then(()=>{
     console.log("DB connection with Atlas completed successfully");
 }).catch((err)=>
