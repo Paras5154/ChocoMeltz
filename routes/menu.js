@@ -22,8 +22,8 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
 //Get menu
 router.get("/", async (req, res) => {
     try {
-      const menu = await Menu.find();
-      res.status(200).json(menu);
+      const menu = await Menu.find({});
+      res.status(200).json({menu});
     } catch (err) {
       res.status(500).json(err);
     }
