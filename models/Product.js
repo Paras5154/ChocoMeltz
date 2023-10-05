@@ -9,7 +9,7 @@ const ProductSchema = new mongoose.Schema(
     size: { type: String },
     company: { type: String },
     colors: { type: Array },
-    price: { type: Number, required: true },
+    price: { type: Number, required: [true,"Price must be set now."] },
     featured: {
         type: Boolean,
         default: false,
